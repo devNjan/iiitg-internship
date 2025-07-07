@@ -1,5 +1,5 @@
 function AdminOrders(){
-    return <div>admin orders</div>;
+    return <div>Admin Orders</div>;
 }
 
 export default AdminOrders;

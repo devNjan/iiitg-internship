@@ -6,7 +6,7 @@ This repository contains the code and deployment scripts for a web application d
 
 - **Internship Duration**: 23rd June – 31st July 2025  
 - **Mentor**: Dr. Shubha Brata Nath, IIIT Guwahati  
-- **Objective**: Deploy a complete MERN stack application to the cloud using AWS EC2 and Linux CLI tools.
+- **Objective**: Create and Deploy a complete E-commerce web application to the cloud using AWS EC2 and Linux CLI tools.
 
 ## Current Progress
 

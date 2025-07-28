@@ -10,13 +10,13 @@ import {
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
 
+
 function CommonForm({
   formControls,
   formData,
   setFormData,
   onSubmit,
   buttonText,
-  isBtnDisabled,
 }) {
   function renderInputsByComponentType(getControlItem) {
     let element = null;
@@ -41,24 +41,20 @@ function CommonForm({
         );
 
         break;
+
       case "select":
         element = (
-          <Select
-            onValueChange={(value) =>
-              setFormData({
-                ...formData,
-                [getControlItem.name]: value,
-              })
-            }
-            value={value}
-          >
-            <SelectTrigger className="w-full">
-              <SelectValue placeholder={getControlItem.label} />
+          <Select onValueChange={(value)=> setFormData({
+            ...formData, [getControlItem.name] : value
+          })} value={value}>
+            <SelectTrigger className="w-full ">
+              <SelectValue placeholder={getControlItem.placeholder} />
             </SelectTrigger>
             <SelectContent>
               {getControlItem.options && getControlItem.options.length > 0
                 ? getControlItem.options.map((optionItem) => (
                     <SelectItem key={optionItem.id} value={optionItem.id}>
+                      {" "}
                       {optionItem.label}
                     </SelectItem>
                   ))
@@ -68,9 +64,10 @@ function CommonForm({
         );
 
         break;
+
       case "textarea":
         element = (
-          <Textarea
+          <TextArea
             name={getControlItem.name}
             placeholder={getControlItem.placeholder}
             id={getControlItem.id}
@@ -104,7 +101,6 @@ function CommonForm({
         );
         break;
     }
-
     return element;
   }
 
@@ -118,9 +114,9 @@ function CommonForm({
           </div>
         ))}
       </div>
-      <Button disabled={isBtnDisabled} type="submit" className="mt-2 w-full">
+      <button type="submit" className="mt-2 w-full">
         {buttonText || "Submit"}
-      </Button>
+      </button>
     </form>
   );
 }

@@ -1,4 +1,4 @@
-#IIITG Internship
+# IIITG Internship
 
 This repository contains the code and deployment scripts for a web application developed and deployed during a 40-day internship under Dr.Shubha Brata Nath at IIIT Guwahati. The primary objective of this internship was to understand and implement cloud-based deployment using AWS services.
 
